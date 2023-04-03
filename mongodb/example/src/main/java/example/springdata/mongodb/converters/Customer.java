@@ -30,7 +30,9 @@ import org.springframework.util.Assert;
 @Document
 public class Customer {
 
-	private String id, firstname, lastname;
+	private String id;
+	private String firstname;
+	private String lastname;
 
 	@ValueConverter(AddressJsonConverter.class) private Address primary;
 

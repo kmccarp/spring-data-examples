@@ -215,16 +215,16 @@ class SpringBooksIntegrationTests {
 
 		var mappedResults = result.getMappedResults();
 
-		var facet_20_to_100_pages = mappedResults.get(0);
-		assertThat(facet_20_to_100_pages.id().min()).isEqualTo(20);
-		assertThat(facet_20_to_100_pages.id().max()).isEqualTo(100);
-		assertThat(facet_20_to_100_pages.count()).isEqualTo(12);
+		var facet20To100Pages = mappedResults.get(0);
+		assertThat(facet20To100Pages.id().min()).isEqualTo(20);
+		assertThat(facet20To100Pages.id().max()).isEqualTo(100);
+		assertThat(facet20To100Pages.count()).isEqualTo(12);
 
-		var facet_100_to_500_pages = mappedResults.get(1);
-		assertThat(facet_100_to_500_pages.id().min()).isEqualTo(100);
-		assertThat(facet_100_to_500_pages.id().max()).isEqualTo(500);
-		assertThat(facet_100_to_500_pages.count()).isEqualTo(63);
-		assertThat(facet_100_to_500_pages.titles()).contains("Spring Data");
+		var facet100To500Pages = mappedResults.get(1);
+		assertThat(facet100To500Pages.id().min()).isEqualTo(100);
+		assertThat(facet100To500Pages.id().max()).isEqualTo(500);
+		assertThat(facet100To500Pages.count()).isEqualTo(63);
+		assertThat(facet100To500Pages.titles()).contains("Spring Data");
 	}
 
 	/**

@@ -39,7 +39,8 @@ class CustomerRepositoryIntegrationTest {
 
 	@Autowired CustomerRepository customers;
 
-	private Customer dave, carter;
+	private Customer dave;
+	private Customer carter;
 
 	@BeforeEach
 	void setUp() {

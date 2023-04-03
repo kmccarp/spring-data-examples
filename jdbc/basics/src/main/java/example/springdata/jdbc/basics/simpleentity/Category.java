@@ -38,7 +38,8 @@ import org.springframework.data.annotation.PersistenceConstructor;
 public class Category {
 
 	private final @Id @With Long id;
-	private String name, description;
+	private String name;
+	private String description;
 	private LocalDateTime created;
 	private @Setter long inserted;
 	private AgeGroup ageGroup;

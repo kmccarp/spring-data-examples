@@ -50,7 +50,9 @@ public class Store {
 	@Value
 	public static class Address {
 
-		String street, city, zip;
+		String street;
+		String city;
+		String zip;
 		@GeoSpatialIndexed(type = GEO_2DSPHERE) Point location;
 
 		/*

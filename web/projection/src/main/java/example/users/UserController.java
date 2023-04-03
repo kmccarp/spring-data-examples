@@ -38,7 +38,7 @@ import org.xmlbeam.annotation.XBRead;
 @RestController
 class UserController {
 
-	private static String XML_PAYLOAD = "<firstname>Dave</firstname><lastname>Matthews</lastname>";
+	private static String xmlPayload = "<firstname>Dave</firstname><lastname>Matthews</lastname>";
 
 	/**
 	 * Receiving POST requests supporting both JSON and XML.
@@ -85,7 +85,7 @@ class UserController {
 	 */
 	@GetMapping(path = "/", produces = MediaType.APPLICATION_XML_VALUE)
 	String getXml() {
-		return "<user>".concat(XML_PAYLOAD).concat("</user>");
+		return "<user>".concat(xmlPayload).concat("</user>");
 	}
 
 	/**
@@ -96,7 +96,7 @@ class UserController {
 	 */
 	@GetMapping(path = "/changed", produces = MediaType.APPLICATION_XML_VALUE)
 	String getChangedXml() {
-		return "<user><username>".concat(XML_PAYLOAD).concat("</username></user>");
+		return "<user><username>".concat(xmlPayload).concat("</username></user>");
 	}
 
 	/**

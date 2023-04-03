@@ -56,7 +56,10 @@ class PersonRepositoryIntegrationTest {
 
 	@Autowired PersonRepository repository;
 
-	private Person dave, oliver, carter, admin;
+	private Person dave;
+	private Person oliver;
+	private Person carter;
+	private Person admin;
 
 	@BeforeEach
 	void setUp() {

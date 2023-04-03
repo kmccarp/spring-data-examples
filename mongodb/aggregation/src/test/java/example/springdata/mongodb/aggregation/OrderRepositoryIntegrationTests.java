@@ -57,9 +57,9 @@ class OrderRepositoryIntegrationTests {
 
 	@Autowired OrderRepository repository;
 
-	private final static LineItem product1 = new LineItem("p1", 1.23);
-	private final static LineItem product2 = new LineItem("p2", 0.87, 2);
-	private final static LineItem product3 = new LineItem("p3", 5.33);
+	private static final LineItem product1 = new LineItem("p1", 1.23);
+	private static final LineItem product2 = new LineItem("p2", 0.87, 2);
+	private static final LineItem product3 = new LineItem("p3", 5.33);
 
 	@BeforeEach
 	void setup() {

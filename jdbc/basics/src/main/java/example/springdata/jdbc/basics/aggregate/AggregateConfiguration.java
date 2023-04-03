@@ -15,7 +15,7 @@
  */
 package example.springdata.jdbc.basics.aggregate;
 
-import static java.util.Arrays.*;
+import static java.util.Arrays.asList;
 
 import java.sql.Clob;
 import java.sql.SQLException;
@@ -24,7 +24,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.convert.converter.Converter;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.jdbc.core.convert.JdbcCustomConversions;
 import org.springframework.data.jdbc.repository.config.AbstractJdbcConfiguration;
@@ -34,7 +33,6 @@ import org.springframework.jdbc.core.JdbcOperations;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.datasource.init.DataSourceInitializer;
 import org.springframework.jdbc.datasource.init.ResourceDatabasePopulator;
-import org.springframework.lang.Nullable;
 
 import javax.sql.DataSource;
 
@@ -75,21 +73,16 @@ public class AggregateConfiguration extends AbstractJdbcConfiguration {
 	@Override
 	public JdbcCustomConversions jdbcCustomConversions() {
 
-		return new JdbcCustomConversions(asList(new Converter<Clob, String>() {
+		return new JdbcCustomConversions(asList(clob -> {
 
-			@Nullable
-			@Override
-			public String convert(Clob clob) {
+			try {
 
-				try {
+				return Math.toIntExact(clob.length()) == 0 //
+			? "" //
+			: clob.getSubString(1, Math.toIntExact(clob.length()));
 
-					return Math.toIntExact(clob.length()) == 0 //
-							? "" //
-							: clob.getSubString(1, Math.toIntExact(clob.length()));
-
-				} catch (SQLException e) {
-					throw new IllegalStateException("Failed to convert CLOB to String.", e);
-				}
+			} catch (SQLException e) {
+				throw new IllegalStateException("Failed to convert CLOB to String.", e);
 			}
 		}));
 	}

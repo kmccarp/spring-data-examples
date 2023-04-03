@@ -17,7 +17,7 @@ class IdGenerationApplication {
 	@Bean
 	BeforeConvertCallback<StringIdMinion> beforeSaveCallback() {
 
-		return (minion) -> {
+		return minion -> {
 			if (minion.id == null) {
 				minion.id = UUID.randomUUID().toString();
 			}

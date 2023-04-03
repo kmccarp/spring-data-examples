@@ -30,6 +30,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class NoOpConnectionProvider implements MultiTenantConnectionProvider, HibernatePropertiesCustomizer {
 
+	private static final long serialVersionUID = 1;
+
 	@Autowired DataSource dataSource;
 
 	@Override

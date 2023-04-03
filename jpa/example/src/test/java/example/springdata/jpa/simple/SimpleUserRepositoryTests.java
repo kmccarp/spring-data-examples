@@ -245,9 +245,7 @@ class SimpleUserRepositoryTests {
 	@Test
 	@Transactional(propagation = Propagation.NOT_SUPPORTED)
 	void rejectsStreamExecutionIfNoSurroundingTransactionActive() {
-		Assertions.assertThrows(InvalidDataAccessApiUsageException.class, () -> {
-			repository.findAllByLastnameIsNotNull();
-		});
+		Assertions.assertThrows(InvalidDataAccessApiUsageException.class, repository::findAllByLastnameIsNotNull);
 	}
 
 	/**

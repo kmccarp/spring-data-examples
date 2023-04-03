@@ -33,7 +33,8 @@ import org.springframework.util.Assert;
 public class Customer {
 
 	private @Id @GeneratedValue Long id;
-	private String firstname, lastname;
+	private String firstname;
+	private String lastname;
 
 	private Address address;
 

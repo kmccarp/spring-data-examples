@@ -60,10 +60,7 @@ class ValueOperationsTests {
 		var valueOperations = operations.opsForValue();
 
 		var cachedMono = valueOperations.get(cacheKey) //
-				.switchIfEmpty(cacheValue().flatMap(it -> {
-
-					return valueOperations.set(cacheKey, it, Duration.ofSeconds(60)).then(Mono.just(it));
-				}));
+				.switchIfEmpty(cacheValue().flatMap(it -> valueOperations.set(cacheKey, it, Duration.ofSeconds(60)).then(Mono.just(it))));
 
 		log.info("Initial access (takes a while...)");
 

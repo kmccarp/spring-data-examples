@@ -39,7 +39,8 @@ import org.springframework.util.Assert;
 public class Customer implements AggregateRoot<Customer, CustomerId> {
 
 	private final CustomerId id;
-	private String firstname, lastname;
+	private String firstname;
+	private String lastname;
 	private List<Address> addresses;
 
 	public Customer(String firstname, String lastname, Address address) {

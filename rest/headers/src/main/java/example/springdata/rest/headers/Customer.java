@@ -49,7 +49,8 @@ public class Customer {
 	private @Version Long version;
 	private @JsonIgnore @LastModifiedDate LocalDateTime lastModifiedDate;
 
-	private final String firstname, lastname;
+	private final String firstname;
+	private final String lastname;
 	private final Gender gender;
 
 	@OneToOne(cascade = CascadeType.ALL, orphanRemoval = true) //

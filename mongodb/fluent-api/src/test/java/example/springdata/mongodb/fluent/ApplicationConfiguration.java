@@ -34,7 +34,7 @@ public class ApplicationConfiguration {
 	@Bean
 	CommandLineRunner init(MongoTemplate template) {
 
-		return (args) -> {
+		return args -> {
 
 			if (template.collectionExists(COLLECTION)) {
 				template.dropCollection(COLLECTION);

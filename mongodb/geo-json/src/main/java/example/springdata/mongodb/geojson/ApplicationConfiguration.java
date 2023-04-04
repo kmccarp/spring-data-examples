@@ -56,7 +56,7 @@ public class ApplicationConfiguration {
 		return factoryBean;
 	}
 
-	static abstract class GeoJsonPointMixin {
+	abstract static class GeoJsonPointMixin {
 		GeoJsonPointMixin(@JsonProperty("longitude") double x, @JsonProperty("latitude") double y) {}
 	}
 }

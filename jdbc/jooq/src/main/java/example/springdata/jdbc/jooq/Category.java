@@ -31,7 +31,8 @@ public class Category {
 
 	@With
 	private final @Id Long id;
-	private String name, description;
+	private String name;
+	private String description;
 	private AgeGroup ageGroup;
 
 	public Category(Long id, String name, String description, AgeGroup ageGroup) {

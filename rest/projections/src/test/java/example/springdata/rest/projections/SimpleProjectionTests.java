@@ -34,7 +34,7 @@ import org.springframework.data.projection.SpelAwareProxyProjectionFactory;
  */
 class SimpleProjectionTests {
 
-	private ProjectionFactory factory = new SpelAwareProxyProjectionFactory();
+	private final ProjectionFactory factory = new SpelAwareProxyProjectionFactory();
 
 	@Test
 	void createMapBackedProjection() {

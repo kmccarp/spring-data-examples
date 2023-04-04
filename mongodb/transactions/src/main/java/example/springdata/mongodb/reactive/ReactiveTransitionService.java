@@ -51,7 +51,7 @@ public class ReactiveTransitionService {
 
 			return lookup(id) //
 					.flatMap(process -> start(template, process)) //
-					.flatMap(it -> verify(it)) //
+					.flatMap(this::verify) //
 					.flatMap(process -> finish(template, process)).map(Process::id);
 	}
 

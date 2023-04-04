@@ -58,8 +58,11 @@ class ContactRepositoryIntegrationTests {
 	@Autowired ContactRepository contactRepository;
 	@Autowired MongoOperations mongoOperations;
 
-	private Person skyler, walter, flynn;
-	private Relative marie, hank;
+	private Person skyler;
+	private Person walter;
+	private Person flynn;
+	private Relative marie;
+	private Relative hank;
 
 	@BeforeEach
 	void setUp() {

@@ -94,7 +94,7 @@ class UserControllerClientTests {
 		var headers = new HttpHeaders();
 		headers.add(HttpHeaders.ACCEPT, mediaType.toString());
 
-		return template.exchange(path, HttpMethod.GET, new HttpEntity<Void>(headers), UserPayload.class).getBody();
+		return template.exchange(path, HttpMethod.GET, new HttpEntity<>(headers), UserPayload.class).getBody();
 	}
 
 	private static void assertDave(UserPayload payload) {

@@ -26,7 +26,9 @@ import org.springframework.util.Assert;
 @Document
 public class Customer {
 
-	private String id, firstname, lastname;
+	private String id;
+	private String firstname;
+	private String lastname;
 
 	/**
 	 * Creates a new {@link Customer} with the given firstname and lastname.
@@ -75,17 +77,21 @@ public class Customer {
 
 	@Override
 	public boolean equals(Object o) {
-		if (this == o)
+		if (this == o) {
 			return true;
-		if (o == null || getClass() != o.getClass())
+		}
+		if (o == null || getClass() != o.getClass()) {
 			return false;
+		}
 
 		var customer = (Customer) o;
 
-		if (id != null ? !id.equals(customer.id) : customer.id != null)
+		if (id != null ? !id.equals(customer.id) : customer.id != null) {
 			return false;
-		if (firstname != null ? !firstname.equals(customer.firstname) : customer.firstname != null)
+		}
+		if (firstname != null ? !firstname.equals(customer.firstname) : customer.firstname != null) {
 			return false;
+		}
 		return lastname != null ? lastname.equals(customer.lastname) : customer.lastname == null;
 	}
 

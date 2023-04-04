@@ -146,7 +146,7 @@ class UserController {
 				userManagement.findByUsername(new Username(getUsername())).ifPresent(
 						user -> errors.rejectValue("username", "user.username.exists"));
 
-			} catch (IllegalArgumentException o_O) {
+			} catch (IllegalArgumentException oO) {
 				errors.rejectValue("username", "user.username.invalidFormat");
 			}
 		}

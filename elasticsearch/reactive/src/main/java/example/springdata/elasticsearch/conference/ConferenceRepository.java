@@ -23,5 +23,5 @@ import reactor.core.publisher.Flux;
  */
 interface ConferenceRepository extends ReactiveCrudRepository<Conference, String> {
 
-	Flux<Conference> findAllByKeywordsContainsAndDateAfter(String keyword, String Date);
+	Flux<Conference> findAllByKeywordsContainsAndDateAfter(String keyword, String date);
 }

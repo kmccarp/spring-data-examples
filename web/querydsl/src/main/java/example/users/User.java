@@ -33,7 +33,10 @@ import com.fasterxml.jackson.annotation.JsonUnwrapped;
 public class User {
 
 	private @Id String username;
-	private String firstname, lastname, email, nationality;
+	private String firstname;
+	private String lastname;
+	private String email;
+	private String nationality;
 	private @JsonIgnore String password;
 
 	private @JsonUnwrapped Address address;
@@ -41,11 +44,15 @@ public class User {
 
 	@Value
 	public static class Address {
-		String city, street, zip;
+		String city;
+		String street;
+		String zip;
 	}
 
 	@Value
 	public static class Picture {
-		String large, medium, small;
+		String large;
+		String medium;
+		String small;
 	}
 }

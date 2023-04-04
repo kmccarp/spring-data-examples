@@ -60,7 +60,9 @@ class CustomerRepositoryIntegrationTest {
 	@Autowired CustomerRepository repository;
 	@Autowired MongoOperations operations;
 
-	private Customer dave, oliver, carter;
+	private Customer dave;
+	private Customer oliver;
+	private Customer carter;
 
 	@BeforeEach
 	void setUp() {

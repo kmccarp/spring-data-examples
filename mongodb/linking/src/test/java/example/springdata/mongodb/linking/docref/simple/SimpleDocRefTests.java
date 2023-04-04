@@ -93,7 +93,7 @@ public class SimpleDocRefTests {
 				.firstValue();
 
 		assertThat(loaded.getEmployees()) //
-				.allMatch(it -> it instanceof Employee) //
+				.allMatch(Employee.class::isInstance) //
 				.extracting("name").containsExactly("greedo", "boba");
 	}
 }

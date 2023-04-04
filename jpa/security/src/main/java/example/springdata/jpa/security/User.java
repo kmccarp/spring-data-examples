@@ -29,10 +29,12 @@ import jakarta.persistence.Id;
 @Entity
 @Data
 @RequiredArgsConstructor
-public class User {
+public final class User {
 
 	private @Id @GeneratedValue @Getter Long id;
-	private final String firstname, lastname, emailAddress;
+	private final String firstname;
+	private final String lastname;
+	private final String emailAddress;
 
 	@SuppressWarnings("unused")
 	private User() {

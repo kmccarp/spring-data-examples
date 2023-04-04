@@ -36,6 +36,7 @@ import jakarta.persistence.Id;
 public class User {
 
 	private @Id @GeneratedValue Long id;
-	private final String firstname, lastname;
+	private final String firstname;
+	private final String lastname;
 	private final Integer age;
 }

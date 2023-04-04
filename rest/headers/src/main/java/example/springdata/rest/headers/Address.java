@@ -32,7 +32,10 @@ public class Address {
 
 	@GeneratedValue @Id //
 	private Long id;
-	private final String street, zipCode, city, state;
+	private final String street;
+	private final String zipCode;
+	private final String city;
+	private final String state;
 
 	Address() {
 

@@ -41,7 +41,9 @@ public class UserRepositoryInheritanceIntegrationTests {
 
 	@Autowired UserRepository repository;
 
-	User skyler, walter, flynn;
+	User skyler;
+	User walter;
+	User flynn;
 
 	@BeforeEach
 	public void setUp() {

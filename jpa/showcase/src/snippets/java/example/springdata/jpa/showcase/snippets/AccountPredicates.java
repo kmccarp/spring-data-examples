@@ -30,7 +30,7 @@ import com.querydsl.core.types.dsl.BooleanExpression;
  */
 public class AccountPredicates {
 
-	private static QAccount account = QAccount.account;
+	private static final QAccount account = QAccount.account;
 
 	public static BooleanExpression isExpired() {
 		return expiresBefore(LocalDate.now());

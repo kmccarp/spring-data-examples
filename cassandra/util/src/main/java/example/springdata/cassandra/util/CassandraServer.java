@@ -99,6 +99,6 @@ record CassandraServer(String host, int port,
 	}
 
 	enum RuntimeMode {
-		REQUIRE_RUNNING_INSTANCE, EMBEDDED_IF_NOT_RUNNING;
+		REQUIRE_RUNNING_INSTANCE, EMBEDDED_IF_NOT_RUNNING
 	}
 }

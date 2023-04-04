@@ -34,6 +34,7 @@ import org.springframework.data.annotation.Id;
 public class Person {
 
 	private final @Id UUID id = UUID.randomUUID();
-	private final String firstname, lastname;
+	private final String firstname;
+	private final String lastname;
 	private final int age;
 }

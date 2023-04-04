@@ -34,5 +34,6 @@ import jakarta.persistence.Id;
 public class Person {
 
 	private @GeneratedValue @Id Long id;
-	private final String firstname, lastname;
+	private final String firstname;
+	private final String lastname;
 }

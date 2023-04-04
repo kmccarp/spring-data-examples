@@ -45,7 +45,8 @@ public class LegoSet {
 
 	private @Id int id;
 	private String name;
-	private @Transient Period minimumAge, maximumAge;
+	private  @Transient Period minimumAge;
+	private  @Transient Period maximumAge;
 
 	/**
 	 * Since Manuals are part of a {@link LegoSet} and only make sense inside a {@link LegoSet} it is considered part of

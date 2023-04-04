@@ -87,7 +87,7 @@ class UrlLevelSecurityTests {
 		var headers = new HttpHeaders();
 		headers.add(HttpHeaders.ACCEPT, MediaTypes.HAL_JSON_VALUE);
 		headers.add(HttpHeaders.AUTHORIZATION,
-				"Basic " + new String(Base64.getEncoder().encodeToString(("greg:turnquist").getBytes())));
+				"Basic " + new String(Base64.getEncoder().encodeToString("greg:turnquist".getBytes())));
 
 		mvc.perform(get("/employees").//
 				headers(headers)).//
@@ -105,7 +105,7 @@ class UrlLevelSecurityTests {
 		var headers = new HttpHeaders();
 		headers.set(HttpHeaders.ACCEPT, MediaTypes.HAL_JSON_VALUE);
 		headers.set(HttpHeaders.AUTHORIZATION,
-				"Basic " + new String(Base64.getEncoder().encodeToString(("ollie:gierke").getBytes())));
+				"Basic " + new String(Base64.getEncoder().encodeToString("ollie:gierke".getBytes())));
 
 		mvc.perform(get("/employees").//
 				headers(headers)).//

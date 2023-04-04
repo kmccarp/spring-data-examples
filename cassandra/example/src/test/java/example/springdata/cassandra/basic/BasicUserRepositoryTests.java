@@ -42,7 +42,7 @@ import com.datastax.oss.driver.api.core.CqlSession;
 @CassandraKeyspace
 class BasicUserRepositoryTests {
 
-	private final static Version CASSANDRA_3_4 = Version.parse("3.4");
+	private static final Version CASSANDRA_3_4 = Version.parse("3.4");
 
 	@Autowired BasicUserRepository repository;
 	@Autowired CqlSession session;

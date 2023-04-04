@@ -31,7 +31,7 @@ import org.junit.rules.ExternalResource;
  *
  * @author Mark Paluch
  */
-public class CouchbaseAvailableRule extends ExternalResource {
+public final class CouchbaseAvailableRule extends ExternalResource {
 
 	private final String host;
 	private final int port;

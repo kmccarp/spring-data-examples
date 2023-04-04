@@ -27,7 +27,7 @@ import org.springframework.data.annotation.Id;
 @Data
 public class Manual {
 
-	private @Id Long id = null;
+	private @Id Long id;
 	private String author;
 	private String text;
 

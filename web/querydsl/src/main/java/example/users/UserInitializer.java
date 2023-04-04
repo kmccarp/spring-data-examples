@@ -61,14 +61,14 @@ public class UserInitializer {
 		String line = scanner.nextLine();
 		scanner.close();
 
-		FlatFileItemReader<User> reader = new FlatFileItemReader<User>();
+		FlatFileItemReader<User> reader = new FlatFileItemReader<>();
 		reader.setResource(resource);
 
 		DelimitedLineTokenizer tokenizer = new DelimitedLineTokenizer();
 		tokenizer.setNames(line.split(","));
 		tokenizer.setStrict(false);
 
-		DefaultLineMapper<User> lineMapper = new DefaultLineMapper<User>();
+		DefaultLineMapper<User> lineMapper = new DefaultLineMapper<>();
 		lineMapper.setFieldSetMapper(fields -> {
 
 			User user = new User();

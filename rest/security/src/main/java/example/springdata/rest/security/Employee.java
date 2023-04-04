@@ -36,7 +36,9 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class Employee {
 
 	private @Id @GeneratedValue Long id;
-	private final String firstName, lastName, title;
+	private final String firstName;
+	private final String lastName;
+	private final String title;
 
 	Employee() {
 		this.firstName = null;

@@ -26,10 +26,10 @@ import org.springframework.data.redis.stream.StreamListener;
  * @author Christoph Strobl
  * @author Mark Paluch
  */
-public class CapturingStreamListener implements StreamListener<String, MapRecord<String, String, String>> {
+public final class CapturingStreamListener implements StreamListener<String, MapRecord<String, String, String>> {
 
-	private AtomicInteger counter = new AtomicInteger(0);
-	private BlockingDeque<MapRecord<String, String, String>> deque = new LinkedBlockingDeque<>();
+	private final AtomicInteger counter = new AtomicInteger(0);
+	private final BlockingDeque<MapRecord<String, String, String>> deque = new LinkedBlockingDeque<>();
 
 	private CapturingStreamListener() {
 	}

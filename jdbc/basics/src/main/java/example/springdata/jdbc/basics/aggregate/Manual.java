@@ -32,7 +32,8 @@ public class Manual {
 
 	@Column("HANDBUCH_ID")
 	private @Id Long id;
-	private String author, text;
+	private String author;
+	private String text;
 
 	Manual(String text, String author) {
 

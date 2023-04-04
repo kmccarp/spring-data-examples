@@ -33,7 +33,8 @@ import jakarta.persistence.OneToOne;
 public class Customer {
 
 	private @GeneratedValue @Id Long id;
-	private final String firstname, lastname;
+	private final String firstname;
+	private final String lastname;
 	private final Gender gender;
 
 	@OneToOne(cascade = CascadeType.ALL, orphanRemoval = true) //

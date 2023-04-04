@@ -34,7 +34,8 @@ public class Person {
 
 	@Id int id;
 
-	String firstname, lastname;
+	String firstname;
+	String lastname;
 	Address current;
 	List<Address> previous;
 

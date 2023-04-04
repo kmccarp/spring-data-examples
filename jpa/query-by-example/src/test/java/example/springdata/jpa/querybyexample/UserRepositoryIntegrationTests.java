@@ -46,7 +46,11 @@ public class UserRepositoryIntegrationTests {
 
 	@Autowired UserRepository repository;
 
-	User skyler, walter, flynn, marie, hank;
+	User skyler;
+	User walter;
+	User flynn;
+	User marie;
+	User hank;
 
 	@BeforeEach
 	public void setUp() {

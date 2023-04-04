@@ -31,6 +31,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "contacts")
 public class Relative extends Contact {
 
-	private final String firstname, lastname;
+	private final String firstname;
+	private final String lastname;
 	private final Integer age;
 }

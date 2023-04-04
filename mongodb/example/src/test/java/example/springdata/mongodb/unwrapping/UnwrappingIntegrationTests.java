@@ -70,9 +70,7 @@ class UnwrappingIntegrationTests {
 	@Test
 	void documentStructure() {
 
-		var stored = operations.execute(User.class, collection -> {
-			return collection.find(Filters.eq("_id", rogelio.getId())).first();
-		});
+		var stored = operations.execute(User.class, collection -> collection.find(Filters.eq("_id", rogelio.getId())).first());
 
 		assertThat(stored).containsAllEntriesOf(new Document("_id", rogelio.getId())
 				.append("username", rogelio.getUserName().getUsername())

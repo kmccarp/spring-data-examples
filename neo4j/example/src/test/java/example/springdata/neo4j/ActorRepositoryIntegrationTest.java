@@ -106,10 +106,10 @@ class ActorRepositoryIntegrationTest {
 			.allSatisfy(actor -> {
 				if (actor.getName().equals(nealMcDonough.getName())) {
 					assertThat(actor.getRoles())
-						.allSatisfy((r) -> assertThat(r.getRoles()).containsOnly("Daniel Fleming"));
+						.allSatisfy(r -> assertThat(r.getRoles()).containsOnly("Daniel Fleming"));
 				} else if (actor.getName().equals(lindsayLohan.getName())) {
 					assertThat(actor.getRoles())
-						.allSatisfy((r) -> assertThat(r.getRoles()).containsOnly("Aubrey Fleming", "Dakota Moss"));
+						.allSatisfy(r -> assertThat(r.getRoles()).containsOnly("Aubrey Fleming", "Dakota Moss"));
 				}
 			});
 	}

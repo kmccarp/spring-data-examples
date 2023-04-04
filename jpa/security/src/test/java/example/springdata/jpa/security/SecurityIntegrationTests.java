@@ -44,9 +44,15 @@ class SecurityIntegrationTests {
 	@Autowired BusinessObjectRepository businessObjectRepository;
 	@Autowired SecureBusinessObjectRepository secureBusinessObjectRepository;
 
-	private User tom, ollie, admin;
-	private UsernamePasswordAuthenticationToken olliAuth, tomAuth, adminAuth;
-	private BusinessObject object1, object2, object3;
+	private User tom;
+	private User ollie;
+	private User admin;
+	private UsernamePasswordAuthenticationToken olliAuth;
+	private UsernamePasswordAuthenticationToken tomAuth;
+	private UsernamePasswordAuthenticationToken adminAuth;
+	private BusinessObject object1;
+	private BusinessObject object2;
+	private BusinessObject object3;
 
 	@BeforeEach
 	void setup() {

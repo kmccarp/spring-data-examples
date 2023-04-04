@@ -41,7 +41,8 @@ import jakarta.persistence.Id;
 public class Customer {
 
 	private @Id @GeneratedValue Long id;
-	private final String firstname, lastname;
+	private final String firstname;
+	private final String lastname;
 
 	Customer() {
 		this.firstname = null;
@@ -57,6 +58,8 @@ public class Customer {
 	@RequiredArgsConstructor
 	@SuppressWarnings("serial")
 	public static class CustomerId implements Serializable {
+
+		private static final long serialVersionUID = 1;
 
 		private final Long customerId;
 
